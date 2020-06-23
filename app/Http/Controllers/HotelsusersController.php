@@ -55,12 +55,16 @@ class HotelsusersController extends Controller
     return redirect()->back();
     }
 
-    public function login(Request $request)
+    public function login()
     {
     return view('frontend.login');
     Hotelsuser::where("email",$request->input('email'))->get();
     }
 
+    public function dologin(Request $request)
+    {
+    return    Hotelsuser::where("email",$request->input('email'))->get();
+    }
     /**
      * Display the specified resource.
      *

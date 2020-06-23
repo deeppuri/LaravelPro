@@ -91,7 +91,10 @@ Route::get('/Login',[
 	'uses'=>'HotelsusersController@login',
 	'as'=>'/Login'
 ]);
-
+Route::post('/Login',[
+	'uses'=>'HotelsusersController@dologin',
+	'as'=>'/Login'
+]);
 Route::post('/store',[
 	'uses'=>'HotelsusersController@store',
 	'as'=>'/store'
@@ -105,8 +108,6 @@ Route::get('/pricing',[
 Route::get('/booking',[
 'uses'=>'FrontpagesController@booking',
 'as'=>'/booking']);
-
-
 // Route::group(['middleware'=>"web"],function(){
 
 // Route::get('/contact',[

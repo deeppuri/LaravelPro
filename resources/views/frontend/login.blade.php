@@ -21,13 +21,13 @@
                         <h5 class="text-danger">{{ $value }}</h5>
                         <?php endforeach ?>
                         <?php endif ?>
-                        <form method="post" action="{{action('HotelsusersController@login') }}"   class="main-register-form" >
+                        <form method="post" action="{{action('HotelsusersController@dologin') }}"   class="main-register-form" >
                         @csrf
                               <label>Email Address <span>*</span></label>
                            <input name="email" type="text" >
                            <label >Password <span>*</span></label>
                            <input name="password" type="password" >
-                           <button type="submit"     class="log-submit-btn color-bg"  ><span>Register</span></button>
+                           <button type="submit" class="log-submit-btn color-bg"  ><span>Register</span></button>
                         </form>
                      </div>
                   </div>
